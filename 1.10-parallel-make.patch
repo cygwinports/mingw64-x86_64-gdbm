@@ -1,0 +1,8 @@
+--- origsrc/gdbm-1.10/src/Makefile.am	2011-11-12 13:13:01.000000000 -0600
++++ src/gdbm-1.10/src/Makefile.am	2013-02-19 17:25:10.264504100 -0600
+@@ -64,4 +64,4 @@ libgdbm_la_SOURCES = \
+ 
+ # Programs
+ bin_PROGRAMS = testgdbm 
+-testgdbm_LDADD  = ./libgdbm.la
++testgdbm_LDADD  = libgdbm.la
