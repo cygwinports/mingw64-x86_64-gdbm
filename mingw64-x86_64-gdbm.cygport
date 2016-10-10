@@ -2,7 +2,7 @@ CROSS_HOST="x86_64-w64-mingw32"
 inherit cross
 
 NAME="mingw64-x86_64-gdbm"
-VERSION=1.10
+VERSION=1.12
 RELEASE=1
 CATEGORY="Devel"
 SUMMARY="GNU dbm implementation for Win64 toolchain"
@@ -19,10 +19,10 @@ PATCH_URI="
 	http://pkgs.fedoraproject.org/cgit/mingw-gdbm.git/plain/gdbm-1.10-zeroheaders.patch
 	http://pkgs.fedoraproject.org/cgit/mingw-gdbm.git/plain/gdbm-win32-support.patch
 	1.10-no-undefined.patch
-	1.10-parallel-make.patch
+	1.12-parallel-make.patch
 "
 
 DIFF_EXCLUDES="doc"
 
 CYGCONF_ARGS="--enable-libgdbm-compat --disable-nls"
-MAKEOPTS+=" bin_PROGRAMS= INFO_DEPS= man_MANS= "
+MAKEOPTS+=" bin_PROGRAMS= INFO_DEPS= dist_man_MANS= "
